@@ -11,6 +11,8 @@
                 <p>{{photo.descripton}}</p>
                 <br>
                 <p> Location: {{photo.location_taken}}</p>
+                <br>
+                <a href="{% url 'urlLink' photo.id %}">Copy image link</a>
             </div>
         </div>
     </div>

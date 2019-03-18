@@ -8,8 +8,7 @@ urlpatterns = [
     url(r'^$', views.all_images, name='allImages'),
     url(r'^search/', views.search_results, name='search_results'),
     url(r'^search_locations/(\w+)', views.search_locations, name='search_locations'),
-
-
+    url(r'^link/(\d+)', views.get_url, name='urlLink'),
 
 ]
 if settings.DEBUG:

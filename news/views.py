@@ -4,6 +4,7 @@ from .models import Image, Category
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, Http404
 import datetime as dt
+import pyperclip
 
 # Create your views here.
 
@@ -62,3 +63,10 @@ def search_locations(request, location_string):
     message = f"{search_locations}"
     print("hello")
     return render(request, 'search_image.html', {"message": message, "photos": photos})
+
+
+def get_url(request, photo_id):
+    photo = Image.objects.get(id=photo_id)
+    pyperclip.copy("http://127.0.0.1:8000" + photo.photo.url)
+    pyperclip.paste()
+    return render(request, 'image.html', {'photo': photo})

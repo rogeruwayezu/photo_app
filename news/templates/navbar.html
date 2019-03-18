@@ -12,7 +12,8 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="{% url 'allImages' %}">The Moringa Tribune</a>
-                <a class="navbar-brand" href="{% url 'singlePhoto' image.id %}">The Moringa Tribune</a>
+                <a class="navbar-brand" href="{% url 'search_locations' 'Kigali' %}">View photos from Kigali</a>
+                <a class="navbar-brand" href="{% url 'search_locations' 'Nairobi' %}">View photos from Nairobi</a>
             </div>
             <!-- Adding a search form  -->
             <div class="col-sm-4 col-md-4 navbar-right">
